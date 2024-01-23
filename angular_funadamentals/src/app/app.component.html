@@ -1,4 +1,5 @@
-<h1>Angular Fundamentals</h1>
+<div>
+    <h1>Angular Fundamentals</h1>
 <ng-template #myTemp>
     <h3>This is example of ng-template</h3>
     <p>This is ng-template used to wrap template it's our job when and where to render this template</p>
@@ -7,4 +8,11 @@
 <ng-container >
     This special angular element used as a container or to hold structural directive without adding extra element to the DOM
 </ng-container>
+<br><hr>
+<app-projection>
+    <p #para>This content projecting from parent component to child component!</p> 
+</app-projection>
+<br>
+<button (click)="getRef()">Click-parent</button>
 <router-outlet></router-outlet>
+</div>
