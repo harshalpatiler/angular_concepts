@@ -9,10 +9,13 @@
     This special angular element used as a container or to hold structural directive without adding extra element to the DOM
 </ng-container>
 <br><hr>
-<app-projection>
+<input type="text" (keyup)="sendToChild(data.value)" #data>
+<app-projection [msg]="message">
     <p #para>This content projecting from parent component to child component!</p> 
 </app-projection>
 <br>
 <button (click)="getRef()">Click-parent</button>
+<br>
+<hr>
 <router-outlet></router-outlet>
 </div>

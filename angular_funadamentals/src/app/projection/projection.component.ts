@@ -1,4 +1,4 @@
-import { Component, ContentChild, ElementRef } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-projection',
@@ -7,8 +7,12 @@ import { Component, ContentChild, ElementRef } from '@angular/core';
 })
 export class ProjectionComponent {
 @ContentChild('para') projectedContentRef:ElementRef
-
+@Input() msg: string;
 projectedContent(){
   console.log(this.projectedContentRef);
+}
+ngOnChanges() {
+  console.log('ngOnchages hook of app component is called!');
+  console.log(this.msg)
 }
 }
