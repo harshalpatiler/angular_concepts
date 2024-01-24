@@ -12,7 +12,13 @@ projectedContent(){
   console.log(this.projectedContentRef);
 }
 ngOnChanges() {
-  console.log('ngOnchages hook of app component is called!');
-  console.log(this.msg)
+  console.log('ngOnchages hook of child component is called!');
+  //console.log(this.msg)
+}
+ngOnInit(){
+  console.log("ngOnInit lifecycle hook of projection component is called!")
+}
+ngDoCheck(){
+  console.log("ngDoCheck lifecycle hook of projection component is called!")
 }
 }
