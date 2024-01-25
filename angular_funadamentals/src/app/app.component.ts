@@ -29,4 +29,6 @@ export class AppComponent {
   ngDoCheck(){
       console.log("ngDoCheck lifecycle hook of app component is called!")
     }
+
+    
 }
